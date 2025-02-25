@@ -7,11 +7,13 @@ const cors = require("cors");
 const product= require('./controller/product')
 const path=require('path')
 
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 app.use("/",express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+
 
 // Configuration for environment variables
 if (process.env.NODE_ENV !== "PRODUCTION") {
